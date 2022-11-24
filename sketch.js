@@ -80,13 +80,15 @@ function spawnSwords(){
 
 function draw() {
   background(200);
-   if (gameState === END){
-    if(ghost.isTouching = sword){
- ghost.destroy
+  spawnDoors()
+spawnSwords()
+   if (gameState === "end"){
+    if(swordsGroup.isTouching(ghost)){
+ ghost.destroy()
     }
-    gameover.visible = true
+    //gameover.visible = true
     ghost.velocityX = 0;
-    sword.velocityY = 0;
+    //sword.velocityY = 0;
     doorsGroup.setVelocityXEach(0);
     climbersGroup.setVelocityXEach(0);
     swordsGroup.setVelocityXEach(0);
@@ -95,8 +97,7 @@ function draw() {
       tower.y = 300
     }
 
-spawnDoors()
-spawnSwords()
+
 
 if(keyDown("left")){
 ghost.x= ghost.x-5
